@@ -11,7 +11,8 @@ export default function List(props) {
     );
   }
 
-  const notesSortedByDateFromNew = notes.sort((a, b) => {
+  const arrNotes = notes.map((note) => note);
+  const notesSortedByDateFromNew = arrNotes.sort((a, b) => {
     const collator = new Intl.Collator();
     return collator.compare(b.date, a.date);
   });
